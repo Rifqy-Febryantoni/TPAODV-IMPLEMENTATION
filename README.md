@@ -1,4 +1,4 @@
-Setup
+**Setup**
 
 ./ns3 clean
 
