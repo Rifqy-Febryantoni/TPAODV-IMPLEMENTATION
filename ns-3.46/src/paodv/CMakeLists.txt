@@ -1,0 +1,31 @@
+build_lib(
+  LIBNAME paodv
+  SOURCE_FILES
+    helper/paodv-helper.cc
+    model/paodv-dpd.cc
+    model/paodv-id-cache.cc
+    model/paodv-neighbor.cc
+    model/paodv-packet.cc
+    model/paodv-routing-protocol.cc
+    model/paodv-rqueue.cc
+    model/paodv-rtable.cc
+  HEADER_FILES
+    helper/paodv-helper.h
+    model/paodv-dpd.h
+    model/paodv-id-cache.h
+    model/paodv-neighbor.h
+    model/paodv-packet.h
+    model/paodv-routing-protocol.h
+    model/paodv-rqueue.h
+    model/paodv-rtable.h
+  LIBRARIES_TO_LINK
+    ${libapplications}
+    ${libinternet-apps}
+    ${libwifi}
+  TEST_SOURCES
+    test/paodv-id-cache-test-suite.cc
+    test/paodv-regression.cc
+    test/paodv-test-suite.cc
+    test/loopback.cc
+    test/bug-772.cc
+)
