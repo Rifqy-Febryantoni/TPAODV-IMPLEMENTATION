@@ -1,7 +1,7 @@
 Setup
-./ns3 clean
-./ns3 configure
-./ns3 build
+\ ./ns3 clean
+\ ./ns3 configure
+\ ./ns3 build
 
 **PAODV SIMULATION**
 
