@@ -1,0 +1,31 @@
+build_lib(
+  LIBNAME tpaodv
+  SOURCE_FILES
+    helper/tpaodv-helper.cc
+    model/tpaodv-dpd.cc
+    model/tpaodv-id-cache.cc
+    model/tpaodv-neighbor.cc
+    model/tpaodv-packet.cc
+    model/tpaodv-routing-protocol.cc
+    model/tpaodv-rqueue.cc
+    model/tpaodv-rtable.cc
+  HEADER_FILES
+    helper/tpaodv-helper.h
+    model/tpaodv-dpd.h
+    model/tpaodv-id-cache.h
+    model/tpaodv-neighbor.h
+    model/tpaodv-packet.h
+    model/tpaodv-routing-protocol.h
+    model/tpaodv-rqueue.h
+    model/tpaodv-rtable.h
+  LIBRARIES_TO_LINK
+    ${libapplications}
+    ${libinternet-apps}
+    ${libwifi}
+  TEST_SOURCES
+    test/tpaodv-id-cache-test-suite.cc
+    test/tpaodv-regression.cc
+    test/tpaodv-test-suite.cc
+    test/loopback.cc
+    test/bug-772.cc
+)
